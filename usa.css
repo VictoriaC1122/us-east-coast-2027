@@ -1,17 +1,76 @@
-/* 美東手冊在葡萄牙・西班牙手冊樣式之上的補充：四段行程的月曆色帶。 */
-.travel-calendar{--philly-bg:#d7dfe6;--philly-ink:#44566a;--nyc-bg:#e7dfca;--nyc-ink:#6b5d3a;--rest-bg:#dbe3d7;--rest-ink:#46594b;--dc-bg:#e8d6cd;--dc-ink:#75574a}
+/* 美東手冊：版面與字體沿用葡萄牙・西班牙手冊，這裡只換色系。
+   藍天白雲（天藍、雲白）加紐約（計程車黃、褐石磚紅、哈德遜河深藍）。 */
+:root{
+ --paper:#f2f6fa;
+ --surface:#fdfeff;
+ --surface-soft:#e9f1f8;
+ --ink:#22303f;
+ --muted:#5f6e7e;
+ --green:#3a6fa3;
+ --gold:#e3b23c;
+ --red:#b25b4c;
+ --line:#d6e0ea;
+ --cover:#3a6fa3;
+ --cover-text:#fff;
+ --cover-muted:#dcebf8;
+ --accent-text:#2f5479;
+}
+.color-band{background:linear-gradient(90deg,#3a6fa3 0 22%,#7fb2dd 22% 42%,#dfeaf4 42% 56%,#e3b23c 56% 72%,#b25b4c 72% 86%,#22303f 86%)}
+.person-links a,.person-badge{border-color:#c3d1de}
+.masthead{box-shadow:0 12px 28px #2a4a6a14}
+.masthead-text::before{background:#ffffff80}
+.masthead figure::after{background:linear-gradient(90deg,var(--cover) 0,transparent 28%,#3a6fa310 100%)}
+.masthead img{filter:saturate(1.05) contrast(1)}
+.nav-shell{background:#f2f6faf5}
+nav a:hover,.date-list a:hover{background:#dfe9f3}
+.route{--chapter-color:#3a6fa3}
+.route[data-tone="atlantic"]{--chapter-color:#3a6fa3}
+.route[data-tone="ochre"]{--chapter-color:#a37c14}
+.route[data-tone="glass"]{--chapter-color:#5f7f9c}
+.route[data-tone="terracotta"]{--chapter-color:#a3503f}
+.route:hover{box-shadow:0 10px 24px #2a4a6a14}
+.route:not(.has-photo) .route-copy{background:#e6eef6}
+.route[data-tone="terracotta"] .route-copy{background:var(--surface)}
+.route-action{border-color:#b4c6d8}
+.route-photo,.day-photo{background:#dbe6f0}
+.route-photo img,.day-photo img{filter:none}
+.day-photo::after{background:linear-gradient(transparent,#1d2f4480)}
+.day-photo figcaption{text-shadow:0 1px 5px #1d2f4499}
+.trip-summary{border-color:#cbd9e6;border-top-color:var(--gold)}
+.trip-summary dl>div{border-color:#cbd9e6}
+.button.secondary,.day-controls button,select{border-color:#b9cadb}
+.day-card:target{border-color:#8fb0cf}
+.day-card::before{background:#bccddd}
+.day-heading .city{color:#4d6f91}
+.timeline li::before{background:#cbd9e6}
+.day-note{background:#eaf1f8;border-left-color:#9dbbd8;color:#556576}
+.notice{background:#fbf3d9;border-left-color:var(--gold)}
+.notice strong{color:#6b5410}
+.notice p{color:#6f5d28}
+.booked{background:#dcebf8;color:#2f5479}
+.pending{background:#fbefc9;color:#6b5410}
+@media(max-width:700px){
+ .nav-shell,.day-picker{background:#f2f6faf7}
+ .mobile-date-jump select{border-color:#b9cadb}
+}
+
+/* 月曆：四段行程的色帶 */
+.travel-calendar{--philly-bg:#cfe2f3;--philly-ink:#2f5479;--nyc-bg:#f6e3a1;--nyc-ink:#6b5410;--rest-bg:#e1e8ef;--rest-ink:#4d5d6d;--dc-bg:#efd3cb;--dc-ink:#7c4336}
+a.calendar-date:hover,a.calendar-date:focus-visible{background:#e3edf6}
+.calendar-flight{background:#e9f1f8;color:#3a6fa3}
+.calendar-legend .flight-mark{color:#3a6fa3}
 .calendar-band.philly{background:var(--philly-bg);color:var(--philly-ink)}
 .calendar-band.nyc{background:var(--nyc-bg);color:var(--nyc-ink)}
 .calendar-band.rest{background:var(--rest-bg);color:var(--rest-ink)}
 .calendar-band.dc{background:var(--dc-bg);color:var(--dc-ink)}
-.calendar-legend .philly{background:var(--philly-bg);border:1px solid #a9b6c2}
-.calendar-legend .nyc{background:var(--nyc-bg);border:1px solid #c6b995}
-.calendar-legend .rest{background:var(--rest-bg);border:1px solid #aab9a4}
-.calendar-legend .dc{background:var(--dc-bg);border:1px solid #c5a79a}
-.calendar-period.philly{background:#e9edf1;border-color:#cfd8e0;color:var(--philly-ink)}
-.calendar-period.nyc{background:#f1ecdf;border-color:#ddd3bb;color:var(--nyc-ink)}
-.calendar-period.rest{background:#ecefe7;border-color:#cdd6c7;color:var(--rest-ink)}
-.calendar-period.dc{background:#f1e8e2;border-color:#dfcdc3;color:var(--dc-ink)}
+.calendar-legend .philly{background:var(--philly-bg);border:1px solid #9fbcd8}
+.calendar-legend .nyc{background:var(--nyc-bg);border:1px solid #d6bd62}
+.calendar-legend .rest{background:var(--rest-bg);border:1px solid #b3c0cc}
+.calendar-legend .dc{background:var(--dc-bg);border:1px solid #cfa397}
+.calendar-period.philly{background:#e6f0f9;border-color:#c3d8ea;color:var(--philly-ink)}
+.calendar-period.nyc{background:#fcf3d3;border-color:#ecd992;color:var(--nyc-ink)}
+.calendar-period.rest{background:#eef2f6;border-color:#d3dce5;color:var(--rest-ink)}
+.calendar-period.dc{background:#f7e7e2;border-color:#e6c8c0;color:var(--dc-ink)}
 .calendar-periods{gap:10px}
 .calendar-periods .calendar-period{padding:13px 18px}
 .calendar-periods .period-dates{margin:3px 0 4px}
