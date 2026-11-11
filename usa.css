@@ -75,3 +75,7 @@ a.calendar-date:hover,a.calendar-date:focus-visible{background:#e3edf6}
 .calendar-periods .calendar-period{padding:13px 18px}
 .calendar-periods .period-dates{margin:3px 0 4px}
 .calendar-periods .period-count{font-size:1.125rem}
+
+/* 語言與幣別：兩個選單在窄螢幕並排不溢出 */
+.preferences{flex-wrap:wrap;gap:10px 22px}
+@media(max-width:700px){.preferences{gap:8px 14px;padding-inline:16px;justify-content:flex-start}.preferences label{gap:8px}.preferences select{min-width:0;font-size:.8125rem}}
