@@ -1,0 +1,18 @@
+/* 美東手冊在葡萄牙・西班牙手冊樣式之上的補充：四段行程的月曆色帶。 */
+.travel-calendar{--philly-bg:#d7dfe6;--philly-ink:#44566a;--nyc-bg:#e7dfca;--nyc-ink:#6b5d3a;--rest-bg:#dbe3d7;--rest-ink:#46594b;--dc-bg:#e8d6cd;--dc-ink:#75574a}
+.calendar-band.philly{background:var(--philly-bg);color:var(--philly-ink)}
+.calendar-band.nyc{background:var(--nyc-bg);color:var(--nyc-ink)}
+.calendar-band.rest{background:var(--rest-bg);color:var(--rest-ink)}
+.calendar-band.dc{background:var(--dc-bg);color:var(--dc-ink)}
+.calendar-legend .philly{background:var(--philly-bg);border:1px solid #a9b6c2}
+.calendar-legend .nyc{background:var(--nyc-bg);border:1px solid #c6b995}
+.calendar-legend .rest{background:var(--rest-bg);border:1px solid #aab9a4}
+.calendar-legend .dc{background:var(--dc-bg);border:1px solid #c5a79a}
+.calendar-period.philly{background:#e9edf1;border-color:#cfd8e0;color:var(--philly-ink)}
+.calendar-period.nyc{background:#f1ecdf;border-color:#ddd3bb;color:var(--nyc-ink)}
+.calendar-period.rest{background:#ecefe7;border-color:#cdd6c7;color:var(--rest-ink)}
+.calendar-period.dc{background:#f1e8e2;border-color:#dfcdc3;color:var(--dc-ink)}
+.calendar-periods{gap:10px}
+.calendar-periods .calendar-period{padding:13px 18px}
+.calendar-periods .period-dates{margin:3px 0 4px}
+.calendar-periods .period-count{font-size:1.125rem}

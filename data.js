@@ -10,10 +10,16 @@ const CITIES = {
 };
 
 const CHAPTERS = [
-  {num: '01', tone: 'philly', range: ['04-09', '04-11'], title: '費城', sub: '老城區、美術館、南費城', text: '住 Victoria 家。第一天調時差，只排老城區；第二天逛市場和美術館；第三天去南費城吃起司牛肉堡。'},
-  {num: '02', tone: 'nyc', range: ['04-12', '04-18'], title: '紐約', sub: '七天六晚', text: '搭火車去，住曼哈頓。中城、大都會、自由女神、布魯克林大橋、MoMA、High Line，最後一天留著補逛。'},
-  {num: '03', tone: 'rest', range: ['04-19', '04-20'], title: '回費城休息', sub: '洗衣服、逛街', text: '回 Victoria 家休息兩天。有力氣的話去 King of Prussia 逛街，賓州買衣服鞋子不用加稅。'},
-  {num: '04', tone: 'dc', range: ['04-21', '04-23'], title: '華盛頓 D.C.', sub: '國會、博物館、紀念碑', text: '搭火車去，住兩晚。博物館大多免費但要先訂時段票。4/23 晚上直接從市區去杜勒斯機場。'}
+  {num: '01', key: 'philly', tone: 'atlantic', range: ['04-09', '04-11'], nights: 3, title: '費城', sub: '老城區 · 美術館 · 南費城', photo: 'philly'},
+  {num: '02', key: 'nyc', tone: 'ochre', range: ['04-12', '04-18'], nights: 7, title: '紐約', sub: '中城 · 博物館 · 自由女神 · 布魯克林', photo: 'nyc'},
+  {num: '03', key: 'rest', tone: 'glass', range: ['04-19', '04-20'], nights: 2, title: '回費城休息', sub: '洗衣服 · 逛街', photo: 'philly2'},
+  {num: '04', key: 'dc', tone: 'terracotta', range: ['04-21', '04-23'], nights: 2, title: '華盛頓', sub: '國會 · 博物館 · 紀念碑', photo: 'dc'}
+];
+
+const PENDING = [
+  ['04/08 · 華航接駁車', 'CI12 抵達後搭華航接駁車到費城。這班車是否還有、怎麼預約，要向華航確認。'],
+  ['住宿', '紐約 04/12–04/19 七晚、華盛頓 04/21–04/23 兩晚都還沒訂。費城住 Victoria 家。'],
+  ['火車與門票', '三段 Amtrak 待訂。獨立廳、國會導覽、航太博物館、華盛頓紀念碑的票各有開放日期，見門票頁。']
 ];
 
 // [日期, 城市代號, 標題, 行程（時間 內容，用 | 分隔）, 備註]
