@@ -146,7 +146,7 @@ function notes(){return heading(UI.tabs.notes,t('notesNote'))+`<div class="grid"
 const VIEWS={overview,days:itinerary,flights,transport,tickets,stays,notes};
 function renderFooter(){
  const rateText=currency==='TWD'?t('rateLine',{rate:rate.rate.toFixed(2),date:rate.date}):t('rateUsd');
- document.getElementById('footer-info').innerHTML=`${esc(t('footerTitle'))}<br>${esc(t('updated',{date:zh?TRIP.updated.replaceAll('-','.'):fullDate(TRIP.updated.slice(5))}))}<br>${esc(rateText)}`;
+ document.getElementById('footer-info').innerHTML=`${esc(t('footerTitle'))}<br>${esc(t('updated',{date:zh?TRIP.updated.replaceAll('-','.'):new Intl.DateTimeFormat('en-US',{timeZone:'UTC',year:'numeric',month:'short',day:'numeric'}).format(new Date(TRIP.updated+'T12:00:00Z'))}))}<br>${esc(rateText)}`;
 }
 function renderMain(){document.getElementById('main').innerHTML=VIEWS[page]();renderFooter()}
 function renderShell(){
